@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="android_hint">Brúigh úsáideoirí Android \"Ceart go leor\" chun an nasc a oscailt chun dul chuig an gcomhéadan cabhrach</string>
+    <string name="android_user">"D'úsáideoirí Android"</string>
+    <string name="app_name">Comhroinn Il-Scáileáin</string>
+    <string name="cast_for_android">Cast le haghaidh Android</string>
+    <string name="cast_for_ios">Cast le haghaidh iOS</string>
+    <string name="file_share">Comhroinnt comhad</string>
+    <string name="ios_hint">Brúigh úsáideoirí iOS \"Ceart go leor\" chun an nasc a oscailt chun dul chuig an gcomhéadan cabhrach</string>
+    <string name="ios_steptwo">Caith ceol, físeáin, pictiúir atá stóráilte ar do ghuthán chuig an teilifís trí chliceáil</string>
+    <string name="ios_user">"D'úsáideoirí iOS"</string>
+    <string name="mirror_for_android">"Mirror d'Android"</string>
+    <string name="mirror_for_ios">"Mirror d'iOS"</string>
+    <string name="mirror_for_miracast">Mirror le haghaidh taispeántais gan sreang</string>
+    <string name="mirror_for_pango">Mirror do Pango</string>
+    <string name="mirror_for_pango_kajito">Mirror do KAJITO APP</string>
+    <string name="myname">Ainm an mheaisín:</string>
+    <string name="qr_cast">Scan an cód QR chun scáileán a chraoladh</string>
+    <string name="qr_install">Scan an cód QR chun an aip Pango Remote a shuiteáil</string>
+    <string name="qr_install_connect">Scan an cód QR chun an aip Pango Remote a shuiteáil nó ceangal le do theilifís</string>
+    <string name="qr_install_connect_kajito">Scan an cód QR chun an aip KAJITO APP a shuiteáil nó ceangal le do theilifís</string>
+    <string name="qr_install_ios">"Scan an cód QR chun an aip Pango Remote a shuiteáil nó ceangal le do theilifís
+(ní gá don chóras iOS an feidhmchlár seo a shuiteáil)"</string>
+    <string name="qr_install_ios_kajito">"Scan an cód QR chun an aip KAJITO APP a shuiteáil nó ceangal le do theilifís
+(ní gá don chóras iOS an feidhmchlár seo a shuiteáil)"</string>
+    <string name="qr_install_kajito">Scan an cód QR chun an aip KAJITO APP a shuiteáil</string>
+    <string name="remote">Cianda</string>
+    <string name="remote_control_app">Aip rialaithe cianda</string>
+    <string name="smarttv">SmartTV</string>
+    <string name="stepone">Déan cinnte go bhfuil do ghuthán agus do theilifís ceangailte leis an LAN céanna.</string>
+    <string name="str_cast_iphone_01_info">Úsáid feidhm chasadh scáileáin ionsuite an iPhone chun an scáileán a chasadh.</string>
+    <string name="str_cast_iphone_02_info">Ceangail do ghuthán agus do theilifís leis an líonra céanna</string>
+    <string name="str_cast_iphone_03_info">Ceangail do ghuthán agus do theilifís leis an líonra céanna, sleamhnaigh síos an scáileán chun an deilbhín \"Screen Mirroring\" a aimsiú, roghnaigh do theilifís a nascadh chun an scáileán a chasadh</string>
+    <string name="str_file_share_01_info">Tá trí bhealach ann ar féidir leat pictiúir, físeáin agus ceol a roinnt ó do ghuthán le himirt ar do theilifís</string>
+    <string name="str_file_share_02">Comhroinn le haghaidh android (Trí Pango Remote)</string>
+    <string name="str_file_share_02_info">Tar éis duit an aip Pango Remote a shuiteáil, ceangail do ghuthán agus do theilifís leis an líonra céanna, agus roghnaigh an fheidhm \"Comhad a roinnt\" tar éis duit ceangal leis an teilifís san aip</string>
+    <string name="str_file_share_02_info_kajito">Tar éis duit an aip KAJITO APP a shuiteáil, ceangail do ghuthán agus do theilifís leis an líonra céanna, agus roghnaigh an fheidhm \"Comhad a roinnt\" tar éis duit ceangal leis an teilifís san aip</string>
+    <string name="str_file_share_02_kajito">Comhroinn le haghaidh android (Trí KAJITO APP)</string>
+    <string name="str_file_share_03">Comhroinn le haghaidh iOS (Trí AirPlay)</string>
+    <string name="str_file_share_03_info">Ceangail do ghuthán agus do theilifís leis an líonra céanna, roinn comhaid ó do ghuthán chuig do theilifís tríd an fheidhm \"AirPlay\"</string>
+    <string name="str_file_share_04">Comhroinn le haghaidh Android agus iOS (Trí fheidhmchlár Ceoil/Físeáin)</string>
+    <string name="str_file_share_04_info">Ceangail do ghuthán agus do theilifís leis an líonra céanna, aimsigh an deilbhín \"Cast\" sa fhuinneog athsheinm ceoil agus físe reatha chun teilgean scáileáin a sheoladh</string>
+    <string name="str_remote_01_info">"Suiteáil an aip \"Pango Remote\" chun do theilifís a rialú ó do ghuthán.
+Nóta: D'úsáideoirí Android amháin, seachas úsáideoirí iOS. iOS, bain úsáid as an fheidhm rialaithe cianda san aip Google Home."</string>
+    <string name="str_remote_01_info_kajito">"Suiteáil an aip \"KAJITO APP\" chun do theilifís a rialú ó do ghuthán.
+Nóta: D'úsáideoirí Android amháin, seachas úsáideoirí iOS. iOS, bain úsáid as an fheidhm rialaithe cianda san aip Google Home."</string>
+    <string name="str_remote_02_info">Ceangail do ghuthán agus do theilifís leis an líonra céanna</string>
+    <string name="str_remote_03_info">Tar éis duit an aip Pango Remote a shuiteáil, ceangail do ghuthán agus do theilifís leis an líonra céanna, agus roghnaigh an fheidhm \"Remote\" tar éis duit ceangal leis an teilifís san aip</string>
+    <string name="str_remote_03_info_kajito">Tar éis duit an aip KAJITO APP a shuiteáil, ceangail do ghuthán agus do theilifís leis an líonra céanna, agus roghnaigh an fheidhm \"Remote\" tar éis duit ceangal leis an teilifís san aip</string>
+    <string name="str_screen_cast_01">Suiteáil an aip \"Pango Remote\" chun scáileán a chraoladh chuig do theilifís</string>
+    <string name="str_screen_cast_01_kajito">Suiteáil an aip \"KAJITO\" chun scáileán a chraoladh chuig do theilifís</string>
+    <string name="str_screen_cast_02">Modh 1 (WiFi díreach)</string>
+    <string name="str_screen_cast_02_info">Tacaíonn do theilifís le WiFi díreach, mar sin ní gá duit a bheith ceangailte leis an wifi céanna chun do scáileán a chasadh san aip Pango Remote.</string>
+    <string name="str_screen_cast_02_info_kajito">Tacaíonn do theilifís le WiFi díreach, mar sin ní gá duit a bheith ceangailte leis an wifi céanna chun do scáileán a chasadh san aip KAJITO APP.</string>
+    <string name="str_screen_cast_03">Modh 2 (Trí Pango Remote)</string>
+    <string name="str_screen_cast_03_info">Tar éis duit an aip Pango Remote a shuiteáil, ceangail do ghuthán agus do theilifís leis an líonra céanna, agus roghnaigh an fheidhm \"Screen Cast\" tar éis duit ceangal leis an teilifís san aip.</string>
+    <string name="str_screen_cast_03_info_kajito">Tar éis duit an aip KAJITO APP a shuiteáil, ceangail do ghuthán agus do theilifís leis an líonra céanna, agus roghnaigh an fheidhm \"Screen Cast\" tar éis duit ceangal leis an teilifís san aip.</string>
+    <string name="str_screen_cast_03_kajito">Modh 2 (Trí KAJITO APP)</string>
+    <string name="str_screen_cast_miracast_info">Cuir isteach Socruithe, roghnaigh teilg, roghnaigh do theilifís a nascadh chun an scáileán a theilgean</string>
+    <string name="str_step_01">Céim 1</string>
+    <string name="str_step_02">Céim 2</string>
+    <string name="wired_network">Líonra sreangaithe</string>
+</resources>

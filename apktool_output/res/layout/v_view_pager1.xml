@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.viewpager.widget.ViewPager android:id="@id/antenna_viewPager" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/antenna_dot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/second_menu_dot_marginBottom" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

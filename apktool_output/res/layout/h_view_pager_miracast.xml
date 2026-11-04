@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/phone_content" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/frame_page_image" android:layout_width="wrap_content" android:layout_height="300.0dp" android:src="@drawable/img_screen_cast_miracast" android:scaleType="centerInside" />
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@id/frame_page_devicename_text" android:layout_width="115.0dp" android:layout_height="wrap_content" android:layout_marginTop="76.0dp" android:text="TVTVTVTVTVTVTVTVTV" android:singleLine="true" android:layout_marginStart="465.0dp" />
+    </RelativeLayout>
+    <TextView android:textSize="16.0sp" android:textColor="#c5c6c6" android:gravity="center" android:id="@id/frame_page_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0dp" android:text="Miracast Method  " />
+    <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/frame_page_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:text="Enter Settings，select cast，choose to connect your TV to cast the screen" android:paddingStart="10.0dp" />
+</LinearLayout>

@@ -1,0 +1,181 @@
+package com.bumptech.glide.load.n;
+
+import android.text.TextUtils;
+import android.util.Log;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.Map;
+
+/* JADX INFO: loaded from: classes.dex */
+public class j implements d<InputStream> {
+
+    /* JADX INFO: renamed from: b, reason: collision with root package name */
+    static final b f3137b = new a();
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    private final com.bumptech.glide.load.p.g f3138c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private final int f3139d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    private final b f3140e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    private HttpURLConnection f3141f;
+    private InputStream g;
+    private volatile boolean h;
+
+    private static class a implements b {
+        a() {
+        }
+
+        @Override // com.bumptech.glide.load.n.j.b
+        public HttpURLConnection a(URL url) {
+            return (HttpURLConnection) url.openConnection();
+        }
+    }
+
+    interface b {
+        HttpURLConnection a(URL url);
+    }
+
+    public j(com.bumptech.glide.load.p.g gVar, int i) {
+        this(gVar, i, f3137b);
+    }
+
+    j(com.bumptech.glide.load.p.g gVar, int i, b bVar) {
+        this.f3138c = gVar;
+        this.f3139d = i;
+        this.f3140e = bVar;
+    }
+
+    private InputStream d(HttpURLConnection httpURLConnection) {
+        InputStream inputStream;
+        if (TextUtils.isEmpty(httpURLConnection.getContentEncoding())) {
+            inputStream = com.bumptech.glide.t.c.b(httpURLConnection.getInputStream(), httpURLConnection.getContentLength());
+        } else {
+            if (Log.isLoggable("HttpUrlFetcher", 3)) {
+                Log.d("HttpUrlFetcher", "Got non empty content encoding: " + httpURLConnection.getContentEncoding());
+            }
+            inputStream = httpURLConnection.getInputStream();
+        }
+        this.g = inputStream;
+        return this.g;
+    }
+
+    private static boolean f(int i) {
+        return i / 100 == 2;
+    }
+
+    private static boolean g(int i) {
+        return i / 100 == 3;
+    }
+
+    private InputStream h(URL url, int i, URL url2, Map<String, String> map) throws IOException {
+        if (i >= 5) {
+            throw new com.bumptech.glide.load.e("Too many (> 5) redirects!");
+        }
+        if (url2 != null) {
+            try {
+                if (url.toURI().equals(url2.toURI())) {
+                    throw new com.bumptech.glide.load.e("In re-direct loop");
+                }
+            } catch (URISyntaxException unused) {
+            }
+        }
+        this.f3141f = this.f3140e.a(url);
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            this.f3141f.addRequestProperty(entry.getKey(), entry.getValue());
+        }
+        this.f3141f.setConnectTimeout(this.f3139d);
+        this.f3141f.setReadTimeout(this.f3139d);
+        this.f3141f.setUseCaches(false);
+        this.f3141f.setDoInput(true);
+        this.f3141f.setInstanceFollowRedirects(false);
+        this.f3141f.connect();
+        this.g = this.f3141f.getInputStream();
+        if (this.h) {
+            return null;
+        }
+        int responseCode = this.f3141f.getResponseCode();
+        if (f(responseCode)) {
+            return d(this.f3141f);
+        }
+        if (!g(responseCode)) {
+            if (responseCode == -1) {
+                throw new com.bumptech.glide.load.e(responseCode);
+            }
+            throw new com.bumptech.glide.load.e(this.f3141f.getResponseMessage(), responseCode);
+        }
+        String headerField = this.f3141f.getHeaderField("Location");
+        if (TextUtils.isEmpty(headerField)) {
+            throw new com.bumptech.glide.load.e("Received empty or null redirect url");
+        }
+        URL url3 = new URL(url, headerField);
+        b();
+        return h(url3, i + 1, url, map);
+    }
+
+    @Override // com.bumptech.glide.load.n.d
+    public Class<InputStream> a() {
+        return InputStream.class;
+    }
+
+    @Override // com.bumptech.glide.load.n.d
+    public void b() {
+        InputStream inputStream = this.g;
+        if (inputStream != null) {
+            try {
+                inputStream.close();
+            } catch (IOException unused) {
+            }
+        }
+        HttpURLConnection httpURLConnection = this.f3141f;
+        if (httpURLConnection != null) {
+            httpURLConnection.disconnect();
+        }
+        this.f3141f = null;
+    }
+
+    @Override // com.bumptech.glide.load.n.d
+    public com.bumptech.glide.load.a c() {
+        return com.bumptech.glide.load.a.REMOTE;
+    }
+
+    @Override // com.bumptech.glide.load.n.d
+    public void cancel() {
+        this.h = true;
+    }
+
+    @Override // com.bumptech.glide.load.n.d
+    public void e(com.bumptech.glide.g gVar, d.a<? super InputStream> aVar) {
+        StringBuilder sb;
+        long jB = com.bumptech.glide.t.f.b();
+        try {
+            aVar.f(h(this.f3138c.h(), 0, null, this.f3138c.e()));
+            if (Log.isLoggable("HttpUrlFetcher", 2)) {
+                sb = new StringBuilder();
+                sb.append("Finished http url fetcher fetch in ");
+                sb.append(com.bumptech.glide.t.f.a(jB));
+                String string = sb.toString();
+            }
+        } catch (IOException e2) {
+            if (Log.isLoggable("HttpUrlFetcher", 3)) {
+                Log.d("HttpUrlFetcher", "Failed to load data for url", e2);
+            }
+            aVar.d(e2);
+            if (!Log.isLoggable("HttpUrlFetcher", 2)) {
+            } else {
+                sb = new StringBuilder();
+            }
+        } finally {
+            if (Log.isLoggable("HttpUrlFetcher", 2)) {
+                Log.v("HttpUrlFetcher", "Finished http url fetcher fetch in " + com.bumptech.glide.t.f.a(jB));
+            }
+        }
+    }
+}

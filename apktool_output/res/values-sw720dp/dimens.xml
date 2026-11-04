@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="arr_marginbottom">48.0dp</dimen>
+    <dimen name="arr_marginend">40.0dp</dimen>
+    <dimen name="hint_textsize">20.0sp</dimen>
+    <dimen name="img_step_marginstart">53.0dp</dimen>
+    <dimen name="name_marginstart">51.0dp</dimen>
+    <dimen name="name_margintop">88.0dp</dimen>
+    <dimen name="name_textsize">24.0sp</dimen>
+    <dimen name="numtwo_margintop">586.0dp</dimen>
+    <dimen name="numtwo_width">800.0dp</dimen>
+    <dimen name="os_marginstart">53.0dp</dimen>
+    <dimen name="os_margintop">42.0dp</dimen>
+    <dimen name="os_textsize">32.0sp</dimen>
+    <dimen name="step_marginstart">110.0dp</dimen>
+    <dimen name="step_textsize">20.0sp</dimen>
+    <dimen name="stepone_margintop">524.0dp</dimen>
+    <dimen name="switchhint_marginbottom">42.0dp</dimen>
+    <dimen name="switchhint_marginend">56.0dp</dimen>
+    <dimen name="tv_stepone_margintop">528.0dp</dimen>
+</resources>
